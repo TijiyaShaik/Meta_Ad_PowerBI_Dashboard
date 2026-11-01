@@ -242,10 +242,10 @@ Meta_Ad_PowerBI_Dashboard/
 ├── Dashboards/
 │   │
 │   ├── Facebook/
-│   │   ├── Facebook_dashboard.png
+│   │   └── Facebook_dashboard.png
+│   │
 │   └── Instagram/
-│       ├── Instagram_dashboard.png
-│       
+│       └── Instagram_dashboard.png
 │
 ├── Dataset/
 │   ├── ad_events.csv
@@ -254,9 +254,10 @@ Meta_Ad_PowerBI_Dashboard/
 │   └── users.csv
 │
 ├── Documentation/
-   ├── Business_Requirements.md
-   ├── Domain_Knowledge.md
-   
+│   ├── Business_Requirements.md
+│   └── Domain_Knowledge.md
+│
+└── meta ad dashboard.pbix
 
 ```
 
