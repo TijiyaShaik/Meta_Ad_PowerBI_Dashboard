@@ -1,0 +1,122 @@
+Business Requirements Document (BRD) 
+Meta Ad Performance Analysis 
+Business Objective 
+The business needs a performance tracking report for advertising campaigns running on 
+Facebook and Instagram. 
+The report will provide visibility into campaign reach, engagement, conversions, and budget 
+utilization. 
+This will enable the marketing team to: 
+• Identify the most effective platform (Facebook vs Instagram). 
+• Track campaign ROI and optimize budget allocation. 
+• Understand audience engagement patterns. 
+ 
+Scope of the Report 
+• In Scope: 
+o Campaigns running on Facebook and Instagram only. 
+• Out of Scope: 
+o Other platforms (Messenger, Audience Network). 
+o Organic engagement (only paid ads will be included). 
+ 
+KPIs & Definitions 
+KPI Definition Formula Example Use 
+Impressions Number of times ads 
+were displayed. 
+Count of event_type = 
+Impression Measure reach 
+Clicks Number of times users 
+clicked ads. Count of event_type = Click 
+Measure 
+engagement 
+intent 
+Shares Number of times ads 
+were shared. 
+Count of event_type = 
+Share Viral engagement 
+Comments Number of user 
+comments on ads. 
+Count of event_type = 
+Comment 
+User sentiment & 
+feedback 
+
+KPI Definition Formula Example Use 
+Purchases Number of purchases 
+made after seeing ads. 
+Count of event_type = 
+Purchase Conversions 
+Engagements Total interactions (Clicks 
++ Shares + Comments). Clicks + Shares + Comments Engagement 
+volume 
+CTR (Click 
+Through Rate) 
+% of impressions that 
+resulted in clicks. (Clicks ÷ Impressions) × 100 Ad effectiveness 
+Engagement Rate % of impressions that 
+resulted in engagements. 
+(Engagements ÷ 
+Impressions) × 100 Overall ad appeal 
+Conversion Rate % of clicks that resulted 
+in purchases. (Purchases ÷ Clicks) × 100 Funnel efficiency 
+Purchase Rate % of impressions that 
+resulted in purchases. 
+(Purchases ÷ Impressions) × 
+100 
+Conversion from 
+reach 
+Total Budget Total spend allocated to 
+campaigns. 
+Sum of 
+campaigns.total_budget Cost analysis 
+Avg. Budget per 
+Campaign 
+Average budget 
+allocation per campaign. 
+Total Budget ÷ Campaign 
+Count 
+Budget 
+distribution 
+ 
+Charts Requirements: 
+1. Target Gender – Donut Chart 
+A donut chart will visualize performance split by target gender (from the ads table). 
+• The metric displayed (e.g., Impressions, Clicks, Purchases) will change dynamically via 
+the parameter. 
+• Purpose: Identify which gender segment contributes most to the selected metric. 
+ 
+2. Target Age Group – Bar Chart 
+A bar chart will show engagement across age groups defined in the ads table. 
+• Each bar will represent one age group. 
+• The metric displayed will switch dynamically. 
+• Purpose: Highlight which age group is most responsive to campaigns. 
+ 
+3. Country – Map 
+A map visualization will display performance by country (from the users table). 
+• Bubble size or color intensity will represent the selected metric. 
+• Purpose: Provide a geographic view of campaign reach and engagement. 
+ 
+4. Calendar Month – Calendar Heat Map 
+A calendar heat map will plot performance at the monthly level, based on the timestamp 
+field in ad_events. 
+• Darker shades will indicate higher activity. 
+• Purpose: Detect seasonal trends, peak ad months, and low-activity periods. 
+ 
+5. Weekly Trend – Stacked Column by Ad Type 
+A stacked column chart will display weekly performance trends. 
+• X-axis → Week number (from the Date Table linked to ad_events). 
+• Stacks → Different ad_type values (from the ads table). 
+• Y-axis → Selected metric. 
+• Purpose: Compare ad type contributions over weeks. 
+ 
+6. Hourly Trend – Area Chart 
+An area chart will show activity by hour of day (from ad_events[time_of_day]). 
+• X-axis → Hour of the day (0–23). 
+• Y-axis → Selected metric. 
+• Purpose: Understand user activity patterns throughout the day. 
+ 
+7. Ad Type – Matrix 
+A matrix visualization will show the selected metric across ad types and possibly break 
+down further by platform (Facebook vs Instagram). 
+• Rows → Ad Types. 
+• Columns → Platforms or other campaign dimensions. 
+• Values → Selected metric. 
+• Purpose: Compare performance across ad formats and platforms side by side. 
